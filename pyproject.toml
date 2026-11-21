@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dqcheck"
+version = "0.1.0"
+description = "Rule-based data quality checks for tabular data"
+authors = [{ name = "Alan Bielecki" }]
+requires-python = ">=3.10"
+dependencies = ["pandas>=2.0", "numpy"]
+license = { text = "MIT" }
+
+[tool.setuptools]
+packages = ["dqcheck"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
