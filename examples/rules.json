@@ -1,0 +1,10 @@
+[
+  {"check": "missing_values", "columns": ["control_id", "owner", "status"]},
+  {"check": "duplicate_rows"},
+  {"check": "duplicate_keys", "key": "control_id"},
+  {"check": "near_duplicate_labels", "column": "risk_area"},
+  {"check": "allowed_values", "column": "status", "allowed": ["Open", "In progress", "Closed"]},
+  {"check": "value_range", "column": "score", "min": 1, "max": 5},
+  {"check": "outliers_iqr", "column": "exposure_eur", "k": 3},
+  {"check": "date_order", "start": "opened", "end": "due"}
+]
